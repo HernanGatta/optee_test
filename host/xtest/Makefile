@@ -110,6 +110,10 @@ srcs  += gp_7000.c \
 	 gp_9000.c
 endif
 
+ifeq ($(CFG_OCALL),y)
+srcs += regression_1100.c
+endif
+
 objs 	:= $(patsubst %.c,$(out-dir)/xtest/%.o, $(srcs))
 
 CFLAGS += -I./
@@ -136,6 +140,7 @@ CFLAGS += -I../../ta/aes_perf/include
 CFLAGS += -I../../ta/socket/include
 CFLAGS += -I../../ta/sdp_basic/include
 CFLAGS += -I../../ta/tpm_log_test/include
+CFLAGS += -I../../ta/ocall/include
 
 ifdef CFG_GP_PACKAGE_PATH
 CFLAGS += -I../../ta/GP_TTA_Arithmetical

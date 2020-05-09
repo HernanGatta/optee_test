@@ -36,6 +36,10 @@ ifeq ($(CFG_SECURE_DATA_PATH),y)
 TA_DIRS += sdp_basic
 endif
 
+ifeq ($(CFG_OCALL),y)
+TA_DIRS += ocall
+endif
+
 ifdef CFG_GP_PACKAGE_PATH
 TA_DIRS += GP_TTA_Arithmetical \
 	   GP_TTA_Crypto \
