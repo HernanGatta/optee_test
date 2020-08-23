@@ -173,7 +173,7 @@ TEE_Result test_premature_session_close(uint32_t param_types)
 	return TEE_SUCCESS;
 }
 
-TEE_Result test_get_premature_session_close_status(uint32_t param_types)
+TEE_Result get_premature_session_close_status(uint32_t param_types)
 {
 	TEE_Result res;
 
@@ -225,7 +225,7 @@ TEE_Result test_premature_context_finalize(uint32_t param_types)
 	return TEE_SUCCESS;
 }
 
-TEE_Result test_get_premature_context_finalize_status(uint32_t param_types)
+TEE_Result get_premature_context_finalize_status(uint32_t param_types)
 {
 	TEE_Result res;
 
@@ -383,7 +383,7 @@ TEE_Result test_null_memref_params_invalid(uint32_t param_types)
 }
 
 TEE_Result
-test_get_premature_context_finalize_during_session_open_ocall_status(uint32_t param_types)
+get_premature_context_finalize_during_session_open_ocall_status(uint32_t param_types)
 {
 	const uint32_t expected_pt = TEE_PARAM_TYPES(TEE_PARAM_TYPE_NONE,
 						     TEE_PARAM_TYPE_NONE,

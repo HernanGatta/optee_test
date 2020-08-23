@@ -372,7 +372,7 @@ no_sess:
 	return ret;
 }
 
-static void xtest_tee_test_1100(ADBG_Case_t *c)
+static void xtest_tee_test_1101(ADBG_Case_t *c)
 {
 	TEEC_Context ctx = {};
 	TEEC_Session sess = {};
@@ -477,5 +477,5 @@ static void xtest_tee_test_1100(ADBG_Case_t *c)
 out:
 	TEEC_FinalizeContext(&ctx);
 }
-ADBG_CASE_DEFINE(regression, 1100, xtest_tee_test_1100,
+ADBG_CASE_DEFINE(regression, 1100, xtest_tee_test_1101,
 		 "Test OCALLs");

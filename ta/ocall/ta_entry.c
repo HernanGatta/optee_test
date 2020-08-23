@@ -111,13 +111,13 @@ TEE_Result TA_InvokeCommandEntryPoint(void *pSessionContext,
 		return test_premature_session_close(nParamTypes);
 
 	case TA_OCALL_CMD_GET_PREMATURE_SESSION_CLOSE_STATUS:
-		return test_get_premature_session_close_status(nParamTypes);
+		return get_premature_session_close_status(nParamTypes);
 
 	case TA_OCALL_CMD_PREMATURE_CONTEXT_FINALIZE:
 		return test_premature_context_finalize(nParamTypes);
 
 	case TA_OCALL_CMD_GET_PREMATURE_CONTEXT_FINALIZE_STATUS:
-		return test_get_premature_context_finalize_status(nParamTypes);
+		return get_premature_context_finalize_status(nParamTypes);
 
 	case TA_OCALL_CMD_NULL_MEMREF_PARAMS:
 		return test_null_memref_params(nParamTypes);
@@ -129,7 +129,7 @@ TEE_Result TA_InvokeCommandEntryPoint(void *pSessionContext,
 		return test_null_memref_params_invalid(nParamTypes);
 
 	case TA_OCALL_CMD_OPEN_SESSION_OCALL_PREMATURE_CONTEXT_FINALIZE_STATUS:
-		return test_get_premature_context_finalize_during_session_open_ocall_status(nParamTypes);
+		return get_premature_context_finalize_during_session_open_ocall_status(nParamTypes);
 
 	default:
 		return TEE_ERROR_BAD_PARAMETERS;
